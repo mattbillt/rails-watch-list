@@ -1,0 +1,9 @@
+<p><strong>List</strong></p>
+<ul class="list-group">
+  <% @list.bookmarks.each do |bookmark| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Add a movie', new_list_bookmark_path(@list) %>
