@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get "up" => "rails/health#show", as: :rails_health_check
 
+  root to: "lists#index"
   # get '/lists', to: 'lists#index', as: :lists
 
   # post '/lists', to: 'lists#create'
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
 
   # get 'lists/:id', to: 'lists#show', as: :list
 
-    resources :lists, only: [:create, :index, :new, :show] do
+    resources :lists, only: [:create, :new, :show] do
 
     resources :bookmarks, only: [:new, :create]
   end
